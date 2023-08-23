@@ -19,7 +19,7 @@ Remove the null values from the data
 Save the Clean data to the file
 
 # CODE and OUTPUT
-```
+```python
 import pandas as pj
 df1=pj.read_csv("Loan_data.csv")
 print(df1)
