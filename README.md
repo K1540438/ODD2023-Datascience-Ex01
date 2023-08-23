@@ -19,6 +19,7 @@ Remove the null values from the data
 Save the Clean data to the file
 
 # CODE and OUTPUT
+```
 import pandas as pj
 df1=pj.read_csv("Loan_data.csv")
 print(df1)
@@ -54,6 +55,7 @@ df['watchers']=df['watchers'].fillna(df['watchers'].median())
 print(df['watchers'])
 df.isnull().sum()
 df.info()
+```
 ##output
 
 <img width="364" alt="Screenshot 2023-08-23 160056" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/d4ce6aaa-34e9-4944-b900-8589adb8b0d2">
