@@ -74,3 +74,6 @@ Dataset
 
 
 <img width="236" alt="Screenshot 2023-08-23 160126" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/7eb04c32-6829-4967-9f61-efe41b40fc10">
+
+
+Result:The output is been verified.
