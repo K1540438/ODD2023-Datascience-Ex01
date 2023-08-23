@@ -57,7 +57,16 @@ df.isnull().sum()
 df.info()
 ```
 ##output
+loaddata
 
+<img width="329" alt="Screenshot 2023-08-23 161027" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/09ec1d0e-ef51-4772-9c25-9922703c8d9a">
+
+<img width="205" alt="Screenshot 2023-08-23 161035" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/84609b3f-5860-4811-a411-950a38fa9c20">
+
+<img width="513" alt="Screenshot 2023-08-23 161103" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/f92447d0-9ccd-4f2b-8d98-2b4d566e752f">
+
+
+Dataset
 <img width="364" alt="Screenshot 2023-08-23 160056" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/d4ce6aaa-34e9-4944-b900-8589adb8b0d2">
 
 <img width="227" alt="Screenshot 2023-08-23 160116" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/9b84eb47-d353-4b5f-9a99-aad85543285e">
