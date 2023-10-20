@@ -1,82 +1,79 @@
 # Ex-01_DS_Data_Cleansing
 
 
-## AIM
+# AIM
 To read the given data and perform data cleaning and save the cleaned data to a file. 
 
-# Explanation
-Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect ,incompleted , irrelevant , duplicated or improperly formatted. 
+# EXPLANATION
+Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect, incompleted, irrelevant, duplicated or improperly formatted. 
 Data cleaning is not simply about erasing data ,but rather finding a way to maximize datasets accuracy without necessarily deleting the information. 
 
 # ALGORITHM
-### STEP 1
+### Step 1
 Read the given Data
-### STEP 2
+### Step 2
 Get the information about the data
-### STEP 3
+### Step 3
 Remove the null values from the data
-### STEP 4
+### Step 4
 Save the Clean data to the file
 
-# CODE and OUTPUT
-
+# CODE
 ```python
+import pandas as pd
 
-import pandas as pj
-df1=pj.read_csv("Loan_data.csv")
-print(df1)
+# Cleaning the file Data_set.csv
+df1=pd.read_csv('Data_set.csv')
+print('Data_set file before cleaning:')
+df1.info()
 df1.isnull().sum()
-df1['Gender']=df1['Gender'].fillna(df1['Gender'].mode()[0])
-df1['Married']=df1['Married'].fillna(df1['Married'].mode()[0])
-df1['Dependents']=df1['Dependents'].fillna(df1['Dependents'].mode()[0])
-df1['Education']=df1['Education'].fillna(df1['Education'].mode()[0])
-df1['Self_Employed']=df1['Self_Employed'].fillna(df1['Self_Employed'].mode()[0])
-df1['LoanAmount']=df1['LoanAmount'].fillna(df1['LoanAmount'].mode()[0])
-df1['Loan_Amount_Term']=df1['Loan_Amount_Term'].fillna(df1['Loan_Amount_Term'].mode()[0])
-df1['Credit_History']=df1['Credit_History'].fillna(df1['Credit_History'].mode()[0])
+df1=df1.dropna(subset='show_name')
+df=df1.dropna(subset='current_overall_rank')
+df1['aired_on']=df1['aired_on'].fillna(df1['aired_on'].mode()[0])
+df1['original_network']=df1['original_network'].fillna(df1['original_network'].mode()[0])
+df1['rating']=df1['rating'].fillna(df1['rating'].mean())
+df1['watchers']=df1['watchers'].fillna(df1['watchers'].median())
+
+# data is cleaned
+print('Data_set file after cleaning:')
 df1.isnull().sum()
 
-import pandas as pj
-df1=pj.read_csv("Data_set.csv")
-print(df1)
-df.head(10)
-df.info()
-df.isnull()
-df.isnull().sum()
-df['show_name']=df['show_name'].fillna(df['aired_on'].mode()[0])
-print(df['show_name'])
-df['aired_on']=df['aired_on'].fillna(df['aired_on'].mode()[0])
-print(df['aired_on'])
-df['original_network']=df['original_network'].fillna(df['aired_on'].mode()[0])
-print(df['original_network'])
-df['rating']=df['rating'].fillna(df['rating'].mean())
-print(df['rating'])
-df['current_overall_rank']=df['current_overall_rank'].fillna(df['current_overall_rank'].mean())
-print(df['current_overall_rank'])
-df['watchers']=df['watchers'].fillna(df['watchers'].median())
-print(df['watchers'])
-df.isnull().sum()
-df.info()
+# Cleaning the file Loan_data.csv
+df2=pd.read_csv('Loan_data.csv')
+print('\nLoan_data file before cleaning:')
+df2.info()
+df2.isnull().sum()
+df2=df2.dropna(subset='LoanAmount')
+df2['Gender']=df2['Gender'].fillna(df2['Gender'].mode()[0])
+df2['Dependents']=df2['Dependents'].fillna(df2['Dependents'].mode()[0])
+df2['Self_Employed']=df2['Self_Employed'].fillna(df2['Self_Employed'].mode()[0])
+df2['Loan_Amount_Term']=df2['Loan_Amount_Term'].fillna(df2['Loan_Amount_Term'].mode()[0])
+df2['Credit_History']=df2['Credit_History'].fillna(df2['Credit_History'].mode()[0])
+
+# data is cleaned
+print('Loan_data file after cleaning:')
+df2.isnull().sum()
 ```
-##output loaddata
 
-<img width="364" alt="Screenshot 2023-08-23 160056" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/c3ee4b09-e014-49a3-86a3-887fa491dc89">
+# OUTPUT
+### Data_set.csv file info
+![01](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/c72221db-db75-491f-906f-df68e2d36b6d)
+### Data_set.csv duplicate data count
+![02](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/7eb8166b-9bd6-47a3-b100-082a3f7a414d)
+### Data_set.csv after cleaning
+![03](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/316c305d-6ba2-4df8-b779-88f0a48cf416)
+### Loan_data.csv file info
+![04](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/b33b8b19-1c41-489c-b488-9a0580aa4984)
+### Loan_data.csv duplicate data count
+![05](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/81e3c5a5-fffd-490c-a7f1-4d361b1aa5bd)
+### Loan_data.csv after cleaning
+![06](https://github.com/yasin-sharif/ODD2023-Datascience-Ex01/assets/105559022/10c1c78e-5253-4e96-a153-b1192b8b796c)
 
-<img width="227" alt="Screenshot 2023-08-23 160116" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/46a96af7-53d3-403c-8201-41f17c90f0df">
-
-<img width="236" alt="Screenshot 2023-08-23 160126" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/a1ff4891-b949-4790-a2a4-359adc36352a">
-
-
-
-Dataset
-
-<img width="329" alt="Screenshot 2023-08-23 161027" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/9729bdfa-3515-4237-9d95-65f3966073fe">
-
-<img width="205" alt="Screenshot 2023-08-23 161035" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/399b14a9-acbf-4d85-a7ec-5d20c82bddb9">
-
-<img width="513" alt="Screenshot 2023-08-23 161103" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/304190ed-901b-4496-a534-f2c0efec19bd">
-
-
+# RESULT
+Thus, the given data is read, cleansed and the cleaned data is saved into the file. 
 
 
-Result:The output is been verified.
+
+
+
+
