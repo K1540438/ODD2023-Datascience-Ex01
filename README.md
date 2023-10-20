@@ -19,7 +19,9 @@ Remove the null values from the data
 Save the Clean data to the file
 
 # CODE and OUTPUT
+
 ```python
+
 import pandas as pj
 df1=pj.read_csv("Loan_data.csv")
 print(df1)
@@ -56,24 +58,25 @@ print(df['watchers'])
 df.isnull().sum()
 df.info()
 ```
-##output
-loaddata
+##output loaddata
 
-<img width="329" alt="Screenshot 2023-08-23 161027" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/09ec1d0e-ef51-4772-9c25-9922703c8d9a">
+<img width="364" alt="Screenshot 2023-08-23 160056" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/c3ee4b09-e014-49a3-86a3-887fa491dc89">
 
-<img width="205" alt="Screenshot 2023-08-23 161035" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/84609b3f-5860-4811-a411-950a38fa9c20">
+<img width="227" alt="Screenshot 2023-08-23 160116" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/46a96af7-53d3-403c-8201-41f17c90f0df">
 
-<img width="513" alt="Screenshot 2023-08-23 161103" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/f92447d0-9ccd-4f2b-8d98-2b4d566e752f">
+<img width="236" alt="Screenshot 2023-08-23 160126" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/a1ff4891-b949-4790-a2a4-359adc36352a">
+
 
 
 Dataset
 
-<img width="364" alt="Screenshot 2023-08-23 160056" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/d4ce6aaa-34e9-4944-b900-8589adb8b0d2">
+<img width="329" alt="Screenshot 2023-08-23 161027" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/9729bdfa-3515-4237-9d95-65f3966073fe">
 
-<img width="227" alt="Screenshot 2023-08-23 160116" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/9b84eb47-d353-4b5f-9a99-aad85543285e">
+<img width="205" alt="Screenshot 2023-08-23 161035" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/399b14a9-acbf-4d85-a7ec-5d20c82bddb9">
+
+<img width="513" alt="Screenshot 2023-08-23 161103" src="https://github.com/Jaswanthp323/ODD2023-Datascience-Ex01/assets/143204560/304190ed-901b-4496-a534-f2c0efec19bd">
 
 
-<img width="236" alt="Screenshot 2023-08-23 160126" src="https://github.com/K1540438/ODD2023-Datascience-Ex01/assets/84171243/7eb04c32-6829-4967-9f61-efe41b40fc10">
 
 
 Result:The output is been verified.
